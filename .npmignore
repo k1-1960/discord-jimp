@@ -3,3 +3,4 @@ test/
 .env
 yarn.*
 .babelrc
+docs/

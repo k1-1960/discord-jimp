@@ -16,7 +16,7 @@ npm i --no-bin-links @k1-1960/discord-jimp
 
 ### ESM
 ```js
-import { WelcomeCard } from "../esm/index.js";
+import { WelcomeCard } from "@k1-1960/discord-jimp";
 
 const card = new WelcomeCard({
   username: "K1_1960",
@@ -38,7 +38,7 @@ main();
 
 ### CJS
 ```js
-const { WelcomeCard } = require("../cjs/index.js");
+const { WelcomeCard } = require("@k1-1960/discord-jimp");
 
 const card = new WelcomeCard({
   username: "K1_1960",

@@ -1,0 +1,5 @@
+test/
+node_modules/
+.env
+cjs-test/
+esm-test/

@@ -1,0 +1,23 @@
+{
+  "name": "@k1-1960/discord-jimp",
+  "version": "1.0.0",
+  "description": "Image generator with Jimp.",
+  "main": "cjs/index.js",
+  "module": "esm/index.js",
+  "scripts": {
+    "test": "echo 'Testing cjs module...' && babel-node cjs-test/index.js && echo 'Testing esm module...' && babel-node esm-test/index.js",
+    "build": "babel esm -d cjs",
+    "publish": "npm publish --access public"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@babel/preset-env": "^7.22.5"
+  },
+  "dependencies": {
+    "jimp": "^0.22.8"
+  }
+}

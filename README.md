@@ -1,6 +1,16 @@
 # discord-jimp
-> yarn add --no-bin-links @k1-1960/discord-jimp
-> npm i --no-bin-links @k1-1960/discord-jimp
+
+yarn
+
+```
+yarn add --no-bin-links @k1-1960/discord-jimp
+```
+
+npm
+
+```
+npm i --no-bin-links @k1-1960/discord-jimp
+```
 
 # WelcomeCard
 
@@ -50,4 +60,4 @@ main();
 
 The output looks something like this:
 
-<img src="https://i.imgur.com/lbyy9uF.jpg" width="90vw" />
+<img src="https://i.imgur.com/lbyy9uF.jpg" width="100%" />

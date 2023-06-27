@@ -17,9 +17,9 @@ npm i --no-bin-links @k1-1960/discord-jimp
 ### ESM
 ```js
 import { AttachmentBuilder } from "discord.js";
-import { WelcomeCard } from "@k1-1960/discord-jimp";
+import { WelcomeCard as WelcomeCardBuilder } from "@k1-1960/discord-jimp";
 
-const card = new WelcomeCard({
+const WelcomeCard = new WelcomeCardBuilder({
   username: "K1_1960",
   title: "Bienvenid@",
   subtitle: "Ahora somos 15 miembros!",
@@ -30,8 +30,8 @@ const card = new WelcomeCard({
 });
 
 async function main() {
-  await card.build();
-  const attachment = new AttachmentBuilder(await card.buffer());
+  await WelcomeCard.build();
+  const attachment = new AttachmentBuilder(await WelcomeCard.buffer());
   
   channel.send({
     files: [attachment]
@@ -44,7 +44,7 @@ main();
 ### CJS
 ```js
 import { AttachmentBuilder } from "discord.js";
-const { WelcomeCard as WelcomeCardBuilder} = require("@k1-1960/discord-jimp");
+const { WelcomeCard: WelcomeCardBuilder} = require("@k1-1960/discord-jimp");
 
 const WelcomeCard = new WelcomeCardBuilder({
   username: "K1_1960",

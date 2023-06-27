@@ -43,7 +43,7 @@ main();
 
 ### CJS
 ```js
-import { AttachmentBuilder } from "discord.js";
+const { AttachmentBuilder } = require("discord.js");
 const { WelcomeCard: WelcomeCardBuilder} = require("@k1-1960/discord-jimp");
 
 const WelcomeCard = new WelcomeCardBuilder({

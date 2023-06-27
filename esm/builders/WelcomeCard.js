@@ -1,19 +1,11 @@
 import Jimp from "jimp";
-
+import { BaseCard } from "./BaseCard.js";
 const width = 1920;
 const height = 1080;
 
-class WelcomeCard {
-  constructor(fields) {
-    this.lienzo = new Jimp(width, height);
-    this.username = "";
-    this.background = "";
-    this.avatar = "";
-    this.title = "";
-    this.subtitle = "";
-    Object.entries(fields).forEach(([x, v]) =>
-      Object.defineProperty(this, x, { value: v })
-    );
+class WelcomeCard extends BaseCard {
+  constructor(props) {
+    super(props);
   }
 
   async applyBackground() {
@@ -81,13 +73,6 @@ class WelcomeCard {
     await this.applyOverlay();
     await this.applyAvatar();
     await this.applyText(this.title, this.username, this.subtitle);
-  }
-  async buffer() {
-    return await this.lienzo.getBufferAsync(Jimp.MIME_JPEG);
-  }
-  
-  async save(route) {
-    this.lienzo.write(route)
   }
 }
 

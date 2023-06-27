@@ -4,3 +4,5 @@ test/
 yarn.*
 .babelrc
 docs/
+esm-test/
+cjs-test/

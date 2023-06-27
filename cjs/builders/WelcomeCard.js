@@ -5,20 +5,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.WelcomeCard = void 0;
 var _jimp = _interopRequireDefault(require("jimp"));
+var _BaseCard = require("./BaseCard.js");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 const width = 1920;
 const height = 1080;
-class WelcomeCard {
-  constructor(fields) {
-    this.lienzo = new _jimp.default(width, height);
-    this.username = "";
-    this.background = "";
-    this.avatar = "";
-    this.title = "";
-    this.subtitle = "";
-    Object.entries(fields).forEach(([x, v]) => Object.defineProperty(this, x, {
-      value: v
-    }));
+class WelcomeCard extends _BaseCard.BaseCard {
+  constructor(props) {
+    super(props);
   }
   async applyBackground() {
     const background = await _jimp.default.read(this.background);
@@ -62,12 +55,6 @@ class WelcomeCard {
     await this.applyOverlay();
     await this.applyAvatar();
     await this.applyText(this.title, this.username, this.subtitle);
-  }
-  async buffer() {
-    return await this.lienzo.getBufferAsync(_jimp.default.MIME_JPEG);
-  }
-  async save(route) {
-    this.lienzo.write(route);
   }
 }
 exports.WelcomeCard = WelcomeCard;

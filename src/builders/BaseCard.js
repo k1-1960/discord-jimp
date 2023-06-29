@@ -1,4 +1,4 @@
-import Jimp from "jimp";
+const Jimp = require("jimp");
 
 class BaseCard {
   constructor(props) {
@@ -26,4 +26,6 @@ class BaseCard {
   }
 }
 
-export { BaseCard };
+module.exports = {
+  BaseCard: BaseCard,
+};

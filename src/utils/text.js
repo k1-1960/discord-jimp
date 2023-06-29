@@ -1,4 +1,4 @@
-import Jimp from "jimp";
+const Jimp = require("jimp");
 
 async function getTextWithRatio({ width, height, text, font }) {
   const maxLength = 8;
@@ -33,4 +33,6 @@ async function getTextWithRatio({ width, height, text, font }) {
   return TextCanvas;
 }
 
-export { getTextWithRatio };
+module.exports = {
+  getTextWithRatio: getTextWithRatio,
+};

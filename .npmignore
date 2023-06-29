@@ -6,3 +6,4 @@ yarn.*
 docs/
 esm-test/
 cjs-test/
+scripts/

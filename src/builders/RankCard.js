@@ -1,6 +1,6 @@
-import Jimp from "jimp";
-import { BaseCard } from "./BaseCard.js";
-import { getTextWithRatio } from "../utils/text.js";
+const Jimp = require("jimp");
+const { BaseCard } = require("./BaseCard.js");
+const { getTextWithRatio } = require("../utils/text.js");
 
 class RankCard extends BaseCard {
   constructor(props) {
@@ -71,6 +71,7 @@ class RankCard extends BaseCard {
       this.height
     );
   }
+
   async applyAvatar() {
     const avatar = await Jimp.read(this.avatar);
     avatar.resize(480, 480);
@@ -80,6 +81,7 @@ class RankCard extends BaseCard {
 
     this.lienzo.composite(avatar, x, y);
   }
+
   async applyTexts() {
     const gfont = await Jimp.loadFont(Jimp.FONT_SANS_128_WHITE);
     const lfont = await Jimp.loadFont(Jimp.FONT_SANS_64_WHITE);
@@ -122,4 +124,6 @@ class RankCard extends BaseCard {
   }
 }
 
-export { RankCard };
+module.exports = {
+  RankCard: RankCard,
+};

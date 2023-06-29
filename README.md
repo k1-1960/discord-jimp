@@ -3,13 +3,13 @@
 yarn
 
 ```
-yarn add --no-bin-links @k1-1960/discord-jimp
+yarn add --no-bin-links @k11960/discord-jimp
 ```
 
 npm
 
 ```
-npm i --no-bin-links @k1-1960/discord-jimp
+npm i --no-bin-links @k11960/discord-jimp
 ```
 
 # WelcomeCard
@@ -17,7 +17,7 @@ npm i --no-bin-links @k1-1960/discord-jimp
 ### ESM
 ```js
 import { AttachmentBuilder } from "discord.js";
-import { WelcomeCard as WelcomeCardBuilder } from "@k1-1960/discord-jimp";
+import { WelcomeCard as WelcomeCardBuilder } from "@k11960/discord-jimp";
 
 const WelcomeCard = new WelcomeCardBuilder({
   username: "K1_1960",
@@ -44,7 +44,7 @@ main();
 ### CJS
 ```js
 const { AttachmentBuilder } = require("discord.js");
-const { WelcomeCard: WelcomeCardBuilder} = require("@k1-1960/discord-jimp");
+const { WelcomeCard: WelcomeCardBuilder} = require("@k11960/discord-jimp");
 
 const WelcomeCard = new WelcomeCardBuilder({
   username: "K1_1960",
@@ -77,7 +77,7 @@ The output looks something like this:
 ### ESM
 ```js
 import { AttachmentBuilder } from "discord.js";
-import { RankCard as RankCardBuilder } from "@k1-1960/discord-jimp";
+import { RankCard as RankCardBuilder } from "@k11960/discord-jimp";
 
 const RankCard = new RankCardBuilder({
   username: "K1_1960",
@@ -106,7 +106,7 @@ main();
 ### CJS
 ```js
 const { AttachmentBuilder } = require("discord.js");
-const { RankCard: RankCardBuilder } = require("@k1-1960/discord-jimp");
+const { RankCard: RankCardBuilder } = require("@k11960/discord-jimp");
 
 const RankCard = new RankCardBuilder({
   username: "K1_1960",
